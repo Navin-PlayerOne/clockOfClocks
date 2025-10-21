@@ -1,0 +1,40 @@
+.digitsContainer{
+  display: grid;
+  grid-template-rows: repeat(6,30px);
+  grid-template-columns: repeat(4,30px);
+  gap: 5px;
+}
+.box{
+  height: 30px;
+  width: 30px;
+  border: solid 2px rgb(249, 219, 165);
+  background-color: wheat;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.line{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: left;
+  height: 2px;
+  background-color: black;
+  width: 50%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body{
+  background-color: blanchedalmond;
+}
+.clockContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+}
+
+.digitsGroup{
+  display: flex;
+  gap: 15px;
+}
