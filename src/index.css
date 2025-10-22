@@ -4,37 +4,46 @@
   grid-template-columns: repeat(4,30px);
   gap: 5px;
 }
-.box{
+.miniClock {
   height: 30px;
   width: 30px;
   border: solid 2px rgb(249, 219, 165);
   background-color: wheat;
-  border-radius: 50px;
+  border-radius: 50%;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.line{
+
+.handSvg {
+  fill: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: left;
-  height: 2px;
-  background-color: black;
-  width: 50%;
+}
+
+.hand {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 body{
   background-color: blanchedalmond;
+  overflow: hidden;
 }
 .clockContainer{
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: space-evenly;
   height: 100vh;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .digitsGroup{
   display: flex;
   gap: 15px;
+}
+@media (max-width:480px) {
+  .clockContainer{
+    gap: 0px;
+  }
 }

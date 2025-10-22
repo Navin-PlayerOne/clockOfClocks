@@ -20,15 +20,15 @@ function App() {
   function getAngledDigits(digit: string) {
     return digitMaps[Number(digit)].flat().map((ele, idx) => {
       return (
-        <div key={`cell-${idx}`} className="box">
-          <div
-            className="line"
-            style={{ transform: `rotate(${ele[0]}deg)` }}
-          ></div>
-          <div
-            className="line"
-            style={{ transform: `rotate(${ele[1]}deg)` }}
-          ></div>
+        <div key={`cell-${idx}`} className="miniClock">
+          <svg className="handSvg" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+            <g className="hand group1" style={{ transform: `rotate(${ele[0]}deg)`, transformOrigin: '15px 15px' }}>
+              <line x1="15" y1="15" x2="30" y2="15" stroke="black" strokeWidth="2" strokeLinecap="round" />
+            </g>
+            <g className="hand group2" style={{ transform: `rotate(${ele[1]}deg)`, transformOrigin: '15px 15px' }}>
+              <line x1="15" y1="15" x2="30" y2="15" stroke="black" strokeWidth="2" strokeLinecap="round" />
+            </g>
+          </svg>
         </div>
       );
     });
