@@ -26,7 +26,7 @@
 }
 body{
   background-color: blanchedalmond;
-  overflow: hidden;
+  margin: 0;
 }
 .clockContainer{
   display: flex;
